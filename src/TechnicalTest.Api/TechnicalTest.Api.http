@@ -1,0 +1,20 @@
+@TechnicalTest.Api_HostAddress = http://localhost:5003
+
+POST {{TechnicalTest.Api_HostAddress}}/reservations
+Content-Type: application/json
+
+{
+	"customerName": "Juan Pérez",
+	"origin": "Bogotá",
+	"destination": "Aeropuerto El Dorado",
+	"date": "2026-04-20T10:00:00Z",
+	"passengers": 3,
+	"serviceType": "standard"
+}
+
+###
+
+GET {{TechnicalTest.Api_HostAddress}}/reservations
+Accept: application/json
+
+###
